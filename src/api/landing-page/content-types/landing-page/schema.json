@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "long_title": {
+      "type": "string"
+    },
+    "short_title": {
+      "type": "string"
+    },
+    "title_section_who_we_are": {
+      "type": "string"
+    },
+    "description_section_who_we_are": {
+      "type": "text"
+    },
+    "image_section_who_we_are": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
