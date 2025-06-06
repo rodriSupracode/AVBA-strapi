@@ -369,12 +369,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
-  collectionName: 'landing_pages';
+export interface ApiPaginaPrincipalPaginaPrincipal
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagina_principals';
   info: {
-    displayName: 'Landing page';
-    pluralName: 'landing-pages';
-    singularName: 'landing-page';
+    displayName: 'pagina principal';
+    pluralName: 'pagina-principals';
+    singularName: 'pagina-principal';
   };
   options: {
     draftAndPublish: true;
@@ -383,20 +384,21 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description_section_who_we_are: Schema.Attribute.Text;
-    image_section_who_we_are: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::landing-page.landing-page'
+      'api::pagina-principal.pagina-principal'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     long_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    section1_background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    section1_description: Schema.Attribute.Text;
+    section1_title: Schema.Attribute.String;
     short_title: Schema.Attribute.String;
-    title_section_who_we_are: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -912,7 +914,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::pagina-principal.pagina-principal': ApiPaginaPrincipalPaginaPrincipal;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagina_principals",
+  "info": {
+    "singularName": "pagina-principal",
+    "pluralName": "pagina-principals",
+    "displayName": "pagina principal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "long_title": {
+      "type": "string"
+    },
+    "short_title": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section1_title": {
+      "type": "string"
+    },
+    "section1_description": {
+      "type": "text"
+    },
+    "section1_background_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
