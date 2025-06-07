@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_helps",
+  "info": {
+    "displayName": "help"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

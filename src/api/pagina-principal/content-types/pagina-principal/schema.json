@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pagina-principal",
     "pluralName": "pagina-principals",
-    "displayName": "pagina principal"
+    "displayName": "pagina principal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,14 +18,15 @@
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "section1_title": {
       "type": "string"
@@ -33,6 +35,23 @@
       "type": "text"
     },
     "section1_background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section2_title": {
+      "type": "string"
+    },
+    "section2_description": {
+      "type": "text"
+    },
+    "section2_background_image": {
       "allowedTypes": [
         "images",
         "files",
@@ -41,6 +60,80 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "section3_title": {
+      "type": "string"
+    },
+    "section3_description": {
+      "type": "text"
+    },
+    "section3_list_volunteer": {
+      "type": "text"
+    },
+    "section3_image_background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section4_title": {
+      "type": "string"
+    },
+    "section4_description": {
+      "type": "text"
+    },
+    "section4_footer_description": {
+      "type": "text"
+    },
+    "section4_donations": {
+      "displayName": "donations",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.donations"
+    },
+    "section5_title": {
+      "type": "string"
+    },
+    "section5_description": {
+      "type": "text"
+    },
+    "section5_image_background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section6_help": {
+      "displayName": "help",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.help"
+    },
+    "section6_title": {
+      "type": "string"
+    },
+    "section6_description": {
+      "type": "text"
+    },
+    "section7_title": {
+      "type": "string"
+    },
+    "section7_desciption": {
+      "type": "text"
+    },
+    "section7_social_networks": {
+      "displayName": "social_networks",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-networks"
     }
   }
 }

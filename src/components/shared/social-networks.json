@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_social_networks",
+  "info": {
+    "displayName": "social_networks"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

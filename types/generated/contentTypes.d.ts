@@ -373,6 +373,7 @@ export interface ApiPaginaPrincipalPaginaPrincipal
   extends Struct.SingleTypeSchema {
   collectionName: 'pagina_principals';
   info: {
+    description: '';
     displayName: 'pagina principal';
     pluralName: 'pagina-principals';
     singularName: 'pagina-principal';
@@ -398,6 +399,35 @@ export interface ApiPaginaPrincipalPaginaPrincipal
     >;
     section1_description: Schema.Attribute.Text;
     section1_title: Schema.Attribute.String;
+    section2_background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    section2_description: Schema.Attribute.Text;
+    section2_title: Schema.Attribute.String;
+    section3_description: Schema.Attribute.Text;
+    section3_image_background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    section3_list_volunteer: Schema.Attribute.Text;
+    section3_title: Schema.Attribute.String;
+    section4_description: Schema.Attribute.Text;
+    section4_donations: Schema.Attribute.Component<'shared.donations', true>;
+    section4_footer_description: Schema.Attribute.Text;
+    section4_title: Schema.Attribute.String;
+    section5_description: Schema.Attribute.Text;
+    section5_image_background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    section5_title: Schema.Attribute.String;
+    section6_description: Schema.Attribute.Text;
+    section6_help: Schema.Attribute.Component<'shared.help', true>;
+    section6_title: Schema.Attribute.String;
+    section7_desciption: Schema.Attribute.Text;
+    section7_social_networks: Schema.Attribute.Component<
+      'shared.social-networks',
+      true
+    >;
+    section7_title: Schema.Attribute.String;
     short_title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
